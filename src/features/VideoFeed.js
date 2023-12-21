@@ -11,9 +11,7 @@ export default function VideoFeed() {
 
   useEffect(() => {
     async function fetchData() {
-      debugger;
       let videos = await getVideos();
-      console.log(videos);
       setVideos(videos);
     }
     fetchData();

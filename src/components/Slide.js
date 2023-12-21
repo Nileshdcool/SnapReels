@@ -1,37 +1,12 @@
 import React from "react";
-import styled from "@emotion/styled";
-import { Spring, animated } from "react-spring/renderprops";
+import { Spring } from "react-spring/renderprops";
 import { withGesture } from "react-with-gesture";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
-import ShareIcon from '@mui/icons-material/Share';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
-
 import styles from '../assets/index.module.css'
-
-const SlideContainer = styled.div`
-  position: absolute;
-  height: 70%;
-  top: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: 50% 50%;
-`;
-
-const SlideCard = styled.div`
-  position: relative;
-  max-width: 50%;
-  min-width: 30%;
-  width: 100vw;
-  height: 100%;
-  background: white;
-  font-size: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: 50% 50%;
-`;
+import { SlideCard } from "./SlideCard";
+import { SlideContainer } from "./SlideContainer";
+import ReactPlayer from 'react-player/lazy'
 
 function Slide({
   content,
@@ -92,6 +67,9 @@ function Slide({
         >
           <SlideCard onClick={() => moveSlide(offsetFromMiddle)}>
             <div key={index} className={`${styles.video}`}>
+
+              {/* TODO: React player is a good choice here */}
+              
               <video className={`${styles.video__player}`} width="640" height="360" controls>
                 <source src={content} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -109,11 +87,15 @@ function Slide({
                   {/* <p>23</p> */}
                 </div>
 
+                {/* //TODO: need to set css properly to fit material icons on video sidebar, also set highlights for these icons  */}
+
                 {/* <div className={`${styles.videoSidebar__button}`}>
                   <ShareIcon className={`${styles["material-icons"]}`}></ShareIcon>
                   <p>75</p>
                 </div> */}
               </div>
+
+              {/* //TODO: Need to set proper footer for the videcard to look more decent and add extra features to it. */}
               
               {/* <div className={`${styles.videoFooter}`}>
                 <div className={`${styles.videoFooter__text}`}>
