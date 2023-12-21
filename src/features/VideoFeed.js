@@ -26,7 +26,7 @@ export default function VideoFeed() {
 
   return (
     <div className={`${styles.video__feed}`}>
-      hello hello
+      <img width={100} height={100} src='./images/Hot Or Not.jpg'></img>
       <VerticalCarousel
         slides={videos}
         offsetRadius={offsetRadius}
