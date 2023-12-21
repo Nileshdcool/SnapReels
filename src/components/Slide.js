@@ -6,7 +6,6 @@ import MessageIcon from '@mui/icons-material/Message';
 import styles from '../assets/index.module.css'
 import { SlideCard } from "./SlideCard";
 import { SlideContainer } from "./SlideContainer";
-import ReactPlayer from 'react-player/lazy'
 
 function Slide({
   content,
