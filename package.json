@@ -1,7 +1,7 @@
 {
-  "name": "react-vertical-carousel",
+  "name": "snap-reels",
   "version": "1.0.0",
-  "description": "Forked from https://github.com/gutiguy/react-spring-3d-carousel and reconfigured to be vertical and with arrows and swipes.",
+  "description": "This is snap-reels where people can upload reels and watch the videos",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
